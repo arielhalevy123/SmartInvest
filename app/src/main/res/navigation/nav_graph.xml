@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.smartinvest.HomeFragment"
+        android:label="Home" />
+
+    <fragment
+        android:id="@+id/Community"
+        android:name="com.example.smartinvest.CommunityFragment"
+        android:label="Community" />
+
+    <fragment
+        android:id="@+id/AI"
+        android:name="com.example.smartinvest.AIFragment"
+        android:label="AIMagic" />
+</navigation>

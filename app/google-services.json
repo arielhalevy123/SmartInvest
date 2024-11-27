@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "385524634926",
+    "project_id": "smartinvest3",
+    "storage_bucket": "smartinvest3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385524634926:android:0455572c32ed7d119396bf",
+        "android_client_info": {
+          "package_name": "com.example.smartinvest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAv13hsll1pNjEP6ugVTC1Q9JC7cX4gWyc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
