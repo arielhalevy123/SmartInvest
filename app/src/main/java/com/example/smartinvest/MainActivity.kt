@@ -14,9 +14,6 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputLayout
-import com.google.firebase.Firebase
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.auth
 
 
 class MainActivity : AppCompatActivity() {
@@ -33,7 +30,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var loginConfirmButton: MaterialButton
     lateinit var loginEmailInput: TextInputLayout
     lateinit var loginPasswordInput: TextInputLayout
-    private lateinit var auth: FirebaseAuth
+ //   private lateinit var auth: FirebaseAuth
+    private val auth = FirebaseSingleton.auth
 // ...
 // Initialize Firebase Auth
     override fun onStart(){
@@ -63,7 +61,6 @@ class MainActivity : AppCompatActivity() {
         loginButton = findViewById(R.id.logInBtn)
         registerButton = findViewById(R.id.regBtn)
         registerframelayout=findViewById(R.id.registerFrameLayout)
-        auth = Firebase.auth
         emailInput = findViewById(R.id.emailInput)
         passwordInput = findViewById(R.id.passwordInput)
         registerFinalButton = findViewById(R.id.buttonRegisterFinal)
@@ -114,7 +111,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun registerUser(email: String, password: String) {
-        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+        FirebaseSingleton.auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Registration successful!", Toast.LENGTH_SHORT).show()
@@ -126,7 +123,7 @@ class MainActivity : AppCompatActivity() {
             }
     }
     private fun logInUser(email: String, password: String) {
-        auth.signInWithEmailAndPassword(email, password)
+        FirebaseSingleton.auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Log In Successful!", Toast.LENGTH_SHORT).show()

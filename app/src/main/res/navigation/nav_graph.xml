@@ -10,11 +10,20 @@
 
     <fragment
         android:id="@+id/Community"
-        android:name="com.example.smartinvest.CommunityFragment"
+        android:name="com.example.smartinvest.community.CommunityFragment"
         android:label="Community" />
 
     <fragment
         android:id="@+id/AI"
         android:name="com.example.smartinvest.AIFragment"
         android:label="AIMagic" />
+    <fragment
+        android:id="@+id/setInvestmentFragment"
+        android:name="com.example.smartinvest.SetInvest.SetInvestmentFragment"
+        android:label="Set Investment" />
+
+    <fragment
+        android:id="@+id/trackMyWorkFragment"
+        android:name="com.example.smartinvest.TrackMyWork.TrackMyWorkFragment"
+        android:label="Track My Work" />
 </navigation>

@@ -2,10 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primaryColor">#6200EE</color>
-    <color name="secondaryColor">#03DAC5</color>
-    <color name="backgroundColor">#FFFFFF</color>
+    <color name="primaryColor">#59b55d</color>
+    <color name="secondaryColor">#baf3e5</color>
+    <color name="backgroundColor">#e5f9fa</color>
     <color name="primaryTextColor">#000000</color>
     <color name="secondaryTextColor">#757575</color>
+    <color name="light_purple">#D8BFD8</color>
+    <color name="active_indicator_color">#4CAF50</color> <!-- צבע ירוק -->
+
+
 </resources>
 

@@ -12,5 +12,13 @@
         android:id="@+id/AI"
         android:icon="@drawable/baseline_star_24"
         android:title="AIMagic" />
+    <item
+        android:id="@+id/setInvestmentFragment"
+        android:icon="@drawable/ic_set_investment"
+        android:title="Set Investment" />
+    <item
+        android:id="@+id/trackMyWorkFragment"
+        android:icon="@drawable/ic_track_work"
+        android:title="Track My Work" />
 
 </menu>
