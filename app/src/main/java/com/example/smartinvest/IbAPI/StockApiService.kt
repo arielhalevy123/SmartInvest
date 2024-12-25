@@ -1,7 +1,7 @@
 package com.example.smartinvest.IbAPI
-
-import com.example.smartinvest.PortfolioSummary
+import com.example.smartinvest.SetInvest.FinancialSummaryResponse
 import com.example.smartinvest.SetInvest.PortfolioItem
+import com.example.smartinvest.SetInvest.PortfolioSummary
 import com.example.smartinvest.SetInvest.StockPriceResponse
 import com.example.smartinvest.SetInvest.TransactionRequest
 import com.example.smartinvest.SetInvest.TransactionResponse
@@ -43,4 +43,10 @@ interface StockApiService {
         @Header("x-api-key") apiKey: String,
         @Body body: TransactionRequest
     ): Call<TransactionResponse>
+
+    @GET("/get_financial_summary")
+    fun getFinancialSummary(
+        @Header("x-api-key") apiKey: String
+    ): Call<FinancialSummaryResponse>
+
 }

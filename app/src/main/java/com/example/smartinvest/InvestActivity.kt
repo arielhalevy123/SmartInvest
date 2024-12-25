@@ -2,11 +2,13 @@ package com.example.smartinvest
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.smartinvest.IbAPI.RetrofitClient
+import com.example.smartinvest.SetInvest.PortfolioSummary
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import retrofit2.Call
 import retrofit2.Callback
@@ -15,6 +17,7 @@ import retrofit2.Response
 private lateinit var userIdTextView: TextView
 private lateinit var valueTextView: TextView
 private lateinit var dailyPnLTextView: TextView
+private lateinit var refreshButton: ImageButton
 
 class InvestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,6 +27,7 @@ class InvestActivity : AppCompatActivity() {
         userIdTextView = findViewById(R.id.userIdTextView)
         valueTextView = findViewById(R.id.valueTextView)
         dailyPnLTextView = findViewById(R.id.dailyPnLTextView)
+        refreshButton = findViewById(R.id.refreshButton)
 
         // Fetch and display user data
         fetchUserData()
@@ -43,6 +47,9 @@ class InvestActivity : AppCompatActivity() {
         // Optional: Handle destination changes
         navController.addOnDestinationChangedListener { _, destination, _ ->
             supportActionBar?.title = destination.label
+        }
+        refreshButton.setOnClickListener {
+            fetchUserData()
         }
     }
 

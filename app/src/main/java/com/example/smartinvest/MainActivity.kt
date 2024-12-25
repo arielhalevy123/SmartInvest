@@ -38,9 +38,9 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
-        if (currentUser != null) {
-            reload()
-        }
+//        if (currentUser != null) {
+//            reload()
+//        }
     }
 
     private fun reload() {

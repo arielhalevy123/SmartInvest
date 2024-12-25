@@ -23,49 +23,27 @@
             android:id="@+id/sectorPieChart"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:layout_marginBottom="24dp" />
+            android:layout_marginBottom="24dp"
+            android:visibility="gone"/>
 
-        <!-- כותרת לפילוח לפי סוג נכסים -->
-        <TextView
+        <ProgressBar
+            android:id="@+id/pieChartProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Asset Allocation"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:layout_gravity="center"
+            android:visibility="visible" />
 
-        <!-- גרף עמודות לפילוח לפי סוג נכסים -->
-        <com.github.mikephil.charting.charts.BarChart
-            android:id="@+id/assetBarChart"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginBottom="24dp" />
 
-        <!-- כותרת לרשימת ביצועים לפי מניה -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Stock Performance"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/stockPerformanceRecyclerView"
+        <LinearLayout
+            android:id="@+id/detailsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp" />
-
-        <!-- כותרת לרשימת דיבידנדים צפויים -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Expected Dividends"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/dividendsRecyclerView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            app:layout_constraintTop_toBottomOf="@id/sectorPieChart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
     </LinearLayout>
 </ScrollView>

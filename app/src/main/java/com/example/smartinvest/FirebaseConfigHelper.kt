@@ -16,4 +16,17 @@ object FirebaseConfigHelper {
                 }
             }
     }
+    fun fetchOpenAiApiKey(onComplete: (String?) -> Unit) {
+        FirebaseSingleton.remoteConfig.fetchAndActivate()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    val openAiApiKey = FirebaseSingleton.remoteConfig.getString("openai_api_key")
+                    onComplete(openAiApiKey)
+                } else {
+                    onComplete(null)
+                }
+            }
+
+
+    }
 }

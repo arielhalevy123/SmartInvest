@@ -59,6 +59,7 @@ dependencies {
     implementation(libs.firebase.config.ktx)
     implementation(libs.firebase.firestore.ktx)
     implementation(libs.mpandroidchart)
+    implementation(libs.firebase.functions.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
