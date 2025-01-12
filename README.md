@@ -92,6 +92,25 @@ SmartInvest/
    - Run the app on an emulator or physical device.
 
 ---
+## Screenshots
+
+### Login Screen
+![Login Screen](login_screen.png)
+
+### Portfolio Summary (Before Buy)
+![Portfolio Summary Before Buy](portfolio_summary_before_buy.png)
+
+### Portfolio Summary (After Buy)
+![Portfolio Summary After Buy](portfolio_summary_after_buy.png)
+
+### Stock Details
+![Stock Details](stock_details.png)
+
+### AI Recommendation
+![AI Recommendation](ai_recommendation.png)
+
+### Sector Allocation
+![Sector Allocation](sector_allocation.png)
 
 ## 🤝 **Contributions**
 
