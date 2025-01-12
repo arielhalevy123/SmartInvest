@@ -96,9 +96,3 @@ SmartInvest/
 ## 🤝 **Contributions**
 
 Feel free to fork the repository and create a pull request for any new features or improvements!
-
----
-
-## 📜 **License**
-
-This project is licensed under the **MIT License**. See the LICENSE file for details.
