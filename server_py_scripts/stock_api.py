@@ -3,7 +3,7 @@ from ib_utils import fetch_stock_data, fetch_portfolio_data, fetch_portfolio_sum
 from ib_utils import fetch_detailed_financial_summary
 
 app = Quart(__name__)
-API_KEY = "12345-abcde-67890-fghij-12345"
+API_KEY = "**********************"
 
 @app.route('/get_stock_info', methods=['GET'])
 async def get_stock_info():
